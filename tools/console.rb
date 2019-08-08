@@ -18,9 +18,12 @@ chocolate = Ingredient.new("Chocolate", cake, 200)
 flour = Ingredient.new("Flour", pancake, 20)
 butter = Ingredient.new("Butter", cake, 500)
 sugar = Ingredient.new("Sugar", cake, 350)
+caster = Ingredient.new("Caster sugar", cake, 350)
+brown_sug = Ingredient.new("Brown sugar", cake, 350)
 apple = Ingredient.new("Apple", crumble, 250)
 almond_milk = Ingredient.new("Almond Milk", pancake, 100)
 banana = Ingredient.new("Banana", waffles, 110)
+
 
 
 

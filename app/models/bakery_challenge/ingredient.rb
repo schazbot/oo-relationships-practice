@@ -1,5 +1,5 @@
 class Ingredient
-  @@all = []
+  @@ingredients = []
 
   attr_accessor :name, :dessert, :calories
 
@@ -7,19 +7,21 @@ class Ingredient
     @name = name
     @dessert = dessert
     @calories = calories
-    @@all << self
-  end
-
-  def bakeries
-    # should return the bakery object for the bakery that uses that ingredient
-    Bakery.all.select{|bakery| bakery.ingredients.include(self)}
-  end
-
-  def find_all_by_name(ingredient)
-    # should take a string argument return an array of all ingredients that include that string in their name
+    @@ingredients << self
   end
 
   def self.all
-    @@all
+    @@ingredients
+  end
+
+  def self.find_all_by_name(ingredient)
+    # should take a string argument return an array of all ingredients that include that string in their name
+    Ingredient.all.select{|ing| ing.name.downcase.include?(ingredient)}
+  end
+
+
+  def bakery
+    # should return the bakery object for the bakery that uses that ingredient
+    Bakery.all.select{|bakery| bakery.ingredients.include?(self)}
   end
 end
