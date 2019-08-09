@@ -34,10 +34,12 @@ Create the necessary methods to connect these classes.
   - returns an array of all listings a guest has stayed at
 - #trips
   - returns an array of all trips a guest has made
+
 - #trip_count
   - returns the number of trips a guest has taken
 - .all
   - returns an array of all guests
+  
 - .pro_traveller
   - returns an array of all guests who have made over 1 trip
 - .find_all_by_name(name)
